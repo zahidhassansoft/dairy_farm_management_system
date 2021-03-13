@@ -13,14 +13,8 @@ use Illuminate\Support\Facades\DB;
 
 class CowCalfController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        // $data  = CowCalf::get();
         $data = DB::select('select cow_calfs.id, cow_calfs.image, cow_calfs.animal_id, cow_calfs.date_of_birth, cows.animal_id as mother_id, cow_calfs.gender, animal_types.name as animal_type, cow_calfs.buy_from, cow_calfs.buy_price, cow_calfs.buy_date, stalls.stall_no, cow_calfs.Status, cow_calfs.user_name from cow_calfs 
         left join animal_types on cow_calfs.animal_type = animal_types.id
         left join cows on cow_calfs.mother_id = cows.id
@@ -28,11 +22,6 @@ class CowCalfController extends Controller
         return view('admin.cowcalf.index', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $data = Color::get();
@@ -44,13 +33,6 @@ class CowCalfController extends Controller
         $mId = Cow::select('id', 'animal_id')->where('gender', 'Female')->get();
         return view('admin.cowcalf.create', compact('data', 'mId', 'animal_type', 'stall'));
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $DOB =  Carbon::parse($request->DOB);
@@ -109,23 +91,11 @@ class CowCalfController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $data = CowCalf::find($id);
@@ -140,13 +110,6 @@ class CowCalfController extends Controller
         return view('admin.cowcalf.edit', compact('data', 'mId', 'color', 'animalType', 'stall'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $DOB =  Carbon::parse($request->DOB);
@@ -196,12 +159,6 @@ class CowCalfController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         DB::select('delete FROM stall_ledger where animal_id = "'.$id.'" ');
