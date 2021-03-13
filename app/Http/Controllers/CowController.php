@@ -13,11 +13,6 @@ use Illuminate\Support\Facades\DB;
 
 class CowController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $data = Cow::orderBy('animal_id')
