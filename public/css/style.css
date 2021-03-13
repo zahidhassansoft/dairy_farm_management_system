@@ -1,0 +1,191 @@
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12,
+ .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, 
+ .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, 
+ .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, 
+ .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, 
+ .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2,
+  .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-right: 10px;
+    padding-left: 10px;}
+.disabled{pointer-events: none;background: #eee;}
+.panel, .box{margin-bottom: 10px;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, 
+a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    font-weight: normal;
+}
+.ui-menu .ui-menu-item-wrapper {font-size: 12px;}
+.ui-datepicker .ui-datepicker-title select {background: black;}
+
+.table-scrollable .select2-container--default .select2-selection--single, 
+.table-scrollable .select2-selection .select2-selection--single, .table-scrollable .form-control{
+    height: 20px;
+    padding: 0px 3px;
+    font-size: 12px;
+}
+.table-scrollable .table>tbody>tr>td, .table-scrollable .table>tbody>tr>th, .table-scrollable .table>tfoot>tr>td, 
+.table-scrollable .table>tfoot>tr>th, .table-scrollable .table>thead>tr>td, .table-scrollable .table>thead>tr>th {
+    padding: 4px;
+    text-align: center;
+    font-size: 12px;
+}
+.table-scrollable .btn-group-sm>.btn, .table-scrollable .btn-sm {
+    padding: 0px 6px;
+}
+.table-scrollable #tbody .form-control {
+    background: unset;
+    border: 0;
+    color: #000;
+}
+.threegroup{width: 33.33%;float: left;}
+
+
+
+.trees, .trees ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.trees ul {
+    margin-left: 1em;
+    position: relative;
+}
+.trees ul ul {
+    margin-left: 0.5em;
+}
+.trees ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid;
+}
+.trees li {
+    margin: 0;
+    padding: 0 1em;
+    line-height: 2em;
+    color: #369;
+    font-weight: 700;
+    position: relative;
+}
+.trees ul li:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 0;
+    border-top: 1px solid;
+    margin-top: -1px;
+    position: absolute;
+    top: 1em;
+    left: 0;
+}
+.trees ul li:last-child:before {
+    background: #fff;
+    height: auto;
+    top: 1em;
+    bottom: 0;
+}
+.indicator {
+    margin-right: 5px;
+}
+.trees li a {
+    text-decoration: none;
+    color: #369;
+}
+.trees li button,
+.trees li button:active,
+.trees li button:focus {
+    text-decoration: none;
+    color: #369;
+    border: none;
+    background: transparent;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    outline: 0;
+}
+.trees a.trees-action {
+    text-decoration: underline;
+    color: #f29e3a;
+}
+.trees input[type=number] {
+    width: 50px;
+    display: inline;
+}
+
+.imageThumb {
+    max-height: 75px;
+    border: 2px solid;
+    padding: 1px;
+    cursor: pointer;
+}
+.pip {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+}
+.remove {
+    display: block;
+    background: #444;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+.remove:hover {
+    background: white;
+    color: black;
+}
+
+.list-area,
+.none {
+    display: none;
+}
+.form-group {
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.text-muted {
+    color: #767474 !important;
+}
+.text-sem-m {
+    font-size: 1.14286rem;
+    line-height: 1.71429rem;
+}
+.text-s {
+    font-size: 0.85714rem;
+    line-height: 1.28571rem;
+}
+table td.action a {
+    float: left;
+    margin-right: 4px;
+}
+.table-scrollable {
+    min-height: 250px;
+}
+.table-scrollable table tbody input {
+    pointer-events: none;
+}
+.dataTables_filter {
+    text-align: right;
+}
+.select2-container--default .select2-selection--single,
+.select2-selection .select2-selection--single,
+.form-control {
+    height: 26px;
+    padding: 2px 6px;
+    font-size: 14px;
+    border: 1px solid #54a8dd;
+    border-radius: 0;
+}
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    height: 20px;
+}
+
+fieldset{margin-bottom: 5px;}
+legend{font-weight: 700;padding: 0px 5px;color: #3F51B5;}
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+    background-color: #295063;
+}
