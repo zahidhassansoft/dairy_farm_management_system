@@ -253,7 +253,6 @@
             }
         });
     });
-
     $(document).ready(function() {
         $('#validate').validate({
             rules: {
